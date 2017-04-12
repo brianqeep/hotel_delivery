@@ -4,10 +4,23 @@
 
 <p><%= link_to "Place an order", new_hotel_order_path(@hotel) %></p>
 <ul>
-  <% @hotel.orders.each do |order|%>
-    <%= order.name%><br>
-    <%= order.number%><br>
-    <%= order.order%><br>
-    <%= order.location%><br>
-  <% end%>
-</ul>
+
+  <table class="table table-striped table-hover">
+    <tr>
+      <th>Customer</th>
+      <th>Pieces</th>
+      <th>Order</th>
+      <th>Location</th>
+      <th>Status</th>
+    </tr>
+    <% @hotel.orders.each do |order|%>
+    <tr>
+      <td><%= order.name%></th>
+      <td><%= order.number%></th>
+      <td><%= order.order%></th>
+      <td><%= order.location%></th>
+      <td><input type="checkbox" name="order_id" id="order_id" value="18"/></th>
+    </tr>
+    <% end%>
+
+  </table>
