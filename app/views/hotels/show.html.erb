@@ -1,0 +1,13 @@
+<%= @hotel.name%><br>
+<%= @hotel.location%><br>
+<%= @hotel.about%><br>
+
+<p><%= link_to "Place an order", new_hotel_order_path(@hotel) %></p>
+<ul>
+  <% @hotel.orders.each do |order|%>
+    <%= order.name%><br>
+    <%= order.number%><br>
+    <%= order.order%><br>
+    <%= order.location%><br>
+  <% end%>
+</ul>

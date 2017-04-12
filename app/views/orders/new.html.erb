@@ -1,0 +1,15 @@
+<%= form_for [@hotel, @order] do |f|%>
+   <%= f.label :Name %>
+   <%= f.text_field :name %>
+
+   <%= f.label :Pieces %>
+   <%= f.text_field :number %>
+
+   <%= f.label :Food %>
+   <%= f.text_field :order %>
+
+   <%= f.label :Location %>
+   <%= f.text_field :location %>
+
+   <p><%= f.submit %></p>
+ <% end %>
