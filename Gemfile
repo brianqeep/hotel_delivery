@@ -42,6 +42,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers'
+  gem 'devise', '~> 4.2'
 end
 
 group :development do

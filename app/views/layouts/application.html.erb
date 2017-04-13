@@ -11,7 +11,13 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <%= link_to "Sign Up", new_user_registration_path%>
+       <%= link_to "Sign In", new_user_session_path%>
+       <%= link_to "logout", destroy_user_session_path, :method => :delete%>
     <%= yield %>
+
     <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/javascripts/jquery.js"></script>
   </body>
