@@ -1,7 +1,14 @@
 <%= @hotel.name%><br>
 <%= @hotel.location%><br>
 <%= @hotel.about%><br>
-
+<%= link_to like_hotel_path(@hotel), method: :put, class: "btn btn-primary" do%>
+  <span class="glyphicon glyphicon-heart glyphicon-align-center"></span>
+  <span class="badge"><%=@hotel.get_upvotes.size%></span>
+<%end%>
+<%= link_to unlike_hotel_path(@hotel), method: :put, class: "btn btn-primary" do%>
+  <span class="glyphicon glyphicon-heart glyphicon-align-center"></span>
+  <span class="badge"><%=@hotel.get_downvotes.size%></span>
+<%end%>
 <p><%= link_to "Place an order", new_hotel_order_path(@hotel) %></p>
 <ul>
 

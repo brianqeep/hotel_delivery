@@ -1,3 +1,4 @@
+<% if user_signed_in?%>
 <%= link_to "Register hotel", new_hotel_path%>
 <ul>
   <% @hotels.each do |hotel|%>
@@ -6,3 +7,4 @@
   <%end%>
 
 </ul>
+<%end%>

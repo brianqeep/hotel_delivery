@@ -1,4 +1,5 @@
 class HotelsController < ApplicationController
+  before_action :find_hotel, only: [:show, :upvote, :downvote]
   def index
     @hotels = Hotel.all
     render :index
@@ -22,9 +23,19 @@ class HotelsController < ApplicationController
       render :new
     end
   end
-
+  def upvote
+    @hotel.upvote_by current_user
+    redirect_to :back
+  end
+  def downvote
+    @hotel.downvote_by current_user
+    redirect_to :back
+  end
 private
   def hotel_params
     params.require(:hotel).permit(:name, :location, :about)
+  end
+  def find_hotel
+    @hotel = Hotel.find(params[:id])
   end
 end

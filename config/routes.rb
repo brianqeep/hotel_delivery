@@ -3,5 +3,11 @@ Rails.application.routes.draw do
   resources :hotels do
     resources :orders
   end
+  resources :hotels do
+    member do
+      put "like", to: "hotels#upvote"
+      put "unlike", to: "hotels#downvote"
+    end
+  end
   root "hotels#index"
 end
