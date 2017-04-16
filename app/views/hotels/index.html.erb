@@ -14,3 +14,9 @@
 
 </ul>
 <%end%>
+
+<ul>
+  <% TwitterApi.our_public_tweets.each do |tweet|%>
+    <li><%= tweet.text%></li>
+  <%end%>
+</ul>
