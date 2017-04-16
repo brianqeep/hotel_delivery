@@ -1,13 +1,16 @@
 class HotelsController < ApplicationController
   before_action :find_hotel, only: [:show, :upvote, :downvote]
   def index
-    @hotels = Hotel.all
+    @search = Hotel.search do
+      fulltext params[:search]
+    end
+    @hotels = @search.results
     render :index
   end
 
   def show
-    @hotel = Hotel.find(params[:id])
-    render :show
+      @hotel = Hotel.find(params[:id])
+      render :show
   end
 
   def new
