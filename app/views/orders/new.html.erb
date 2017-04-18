@@ -1,15 +1,17 @@
-<%= form_for [@hotel, @order] do |f|%>
-   <%= f.label :Name %>
-   <%= f.text_field :name %>
+<div class="col-md-6">
+  <%= form_for [@hotel, @order] do |f|%>
+     <%= f.label :Name %>
+     <%= f.text_field :name %><br>
 
-   <%= f.label :Pieces %>
-   <%= f.text_field :number %>
+     <%= f.label :Pieces %>
+     <%= f.text_field :number %><br>
 
-   <%= f.label :Food %>
-   <%= f.text_field :order %>
+     <%= f.label :Food %>
+     <%= f.text_field :order %><br>
 
-   <%= f.label :Location %>
-   <%= f.text_field :location %>
+     <%= f.label :Location %>
+     <%= f.text_field :location %><br>
 
-   <p><%= f.submit %></p>
- <% end %>
+     <p><%= f.submit %></p>
+   <% end %>
+</div>
