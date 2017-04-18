@@ -8,17 +8,46 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="/stylesheets/bootstrap.css" media="screen" title="no title">
     <link rel="stylesheet" href="/stylesheets/styles.css" media="screen" title="no title">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
   </head>
 
   <body>
-       <%if !user_signed_in?%>
+    <nav class="navbar navbar-fixed-top navbar-default">
+       <div class="container-fluid">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand icon gstyle1" href="/">Home</a>
+         </div>
+         <div id="navbar" class="navbar-collapse collapse">
+           <ul class="nav navbar-nav navbar-right right-navs">
+             <%if !user_signed_in?%>
 
-       <%= link_to "Sign Up", new_user_registration_path%>
-       <%= link_to "LogIn", new_user_session_path%>
-       <%end%>
-       <%if user_signed_in?%>
-       <%= link_to "logout", destroy_user_session_path, :method => :delete%>
-       <%end%> <br>
+             <%= link_to "SignUp", new_user_registration_path%> ||
+             <%= link_to "LogIn", new_user_session_path%>
+             <%end%>
+             <%if user_signed_in?%>
+             <%= link_to "logout", destroy_user_session_path, :method => :delete%>
+             <%end%> <br>
+           </ul>
+         </div>
+       </div>
+     </nav>
+    <div class="splash">
+      <p class="head-text"><span class="head-text-2">Food</span> <span class="head-text-3">Delivery</span></p>
+      <p class="head-text-1"><span class="head-text-4">(Order from your</span> <span class="head-text-5">favourite restaurant/hotel/joint)</span></p>
+    </div>
+
     <%= yield %>
 
     <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>

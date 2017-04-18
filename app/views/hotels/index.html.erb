@@ -1,22 +1,41 @@
 <% if user_signed_in?%>
-<%= form_tag hotels_path, :method => :get do%>
-<p>
-  <%= text_field_tag :search, params[:search]%>
-  <%= submit_tag :search, :name => nil%>
-</p>
-<% end %>
-<%= link_to "Register hotel", new_hotel_path%>
-<ul>
-  <% @hotels.each do |hotel|%>
-    <li><%= link_to hotel.name, hotel_path(hotel)%></li>
-    <%= hotel.user.email%>
-  <%end%>
+<div class="search row">
+  <div class="col-md-4">
+    <%= link_to "Register hotel", new_hotel_path, class: "btn btn-primary"%>
+  </div>
+  <div class="col-md-8">
+    <%= form_tag hotels_path, :method => :get do%>
+    <p>
+      <%= text_field_tag :search, params[:search], class: "search1", placeholder: "Search Hotel"%>
+      <%= submit_tag :Search, :name => nil, class: "btn btn-primary"%>
+    </p>
+    <% end %>
+  </div>
 
-</ul>
-<%end%>
+</div>
+<div class="container row">
+  <div class="hotels col-md-8">
+    <h2 class="text-center head34">Hotels/Restaurants/Joints</h2>
+    <ul>
+      <% @hotels.each do |hotel|%>
+        <p class="thumbnail text-center hots"><%= link_to hotel.name, hotel_path(hotel), class: "gstyle"%><br>
+        <%= hotel.location%></p>
+      <%end%>
 
-<ul>
-  <% TwitterApi.our_public_tweets.each do |tweet|%>
-    <li><%= tweet.text%></li>
-  <%end%>
-</ul>
+    </ul>
+  </div>
+    <%end%>
+    <%if !user_signed_in?%>
+      <div class="message col-md-8">
+        <p>Sign Up or Login to enjoy our services</p>
+      </div>
+    <%end%>
+  <div class="tweets col-md-4">
+    <h2 class="text-center head34">Tweets</h2>
+    <ul>
+      <% TwitterApi.our_public_tweets.each do |tweet|%>
+        <p><%= tweet.text%></p>
+      <%end%>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+.splash{
+  margin-top: 6%;
+  background: url(bg3.jpg) no-repeat center;
+  background-size: cover;
+  height: 400px;
+}
+.gstyle1{
+  font-family: 'Audiowide', cursive;
+}
+.icon{
+  font-size: 40px;
+  color: #0066CC !important;
+}
+.right-navs{
+  color: #750512 !important;
+  font-size: 25px;
+  font-family: 'Audiowide', cursive;
+}
+.head-text{
+  font-family: 'Petit Formal Script', cursive;  color: #fff;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-left: 33%;
+  padding-top: 10%;
+}
+.head-text-2{
+  color: #7D360D;
+}
+.head-text-3{
+  color: #FEFCEA;
+}
+.head-text-1{
+  font-family: 'Jura', sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 80;
+  margin-left: 32.5%;
+}
+.head-text-4{
+  color: #7D360D;
+}
+.head-text-5{
+  color: #FEFCEA;
+}
+.search{
+  margin-left: 40px;
+  margin-top: 1%;
+  width: 700px;
+}
+.search1{
+  width: 250px;
+  height: 33px;
+}
+.hotels{
+  margin-top: 20px;
+}
+.tweets{
+  margin-top: 20px;
+}
+.head34{
+  font-family: 'Jura', sans-serif;
+}
+.hots{
+  box-shadow: 0 16px 8px -8px #grey;
+}
+.gstyle{
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 30px;
+}
+.show-h2{
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 35px;
+  color: #7D360D;
+}
+.show-h3{
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 20px;
+}
+.like{
+  margin-left: 40px;
+}
+.order2{
+margin-top: 10px;
+margin-left: 40px;
+}
+.message{
+  margin-top: 20px;
+  font-family: 'Jura', sans-serif;
+}
